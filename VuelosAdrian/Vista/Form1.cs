@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VuelosAdrian.Administrador;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VuelosAdrian
@@ -188,6 +189,12 @@ namespace VuelosAdrian
                 cBoxIda.SelectedItem = indiceIda;
                 cBoxVuelta.SelectedItem = indiceVuelta;
             }
+        }
+
+        private void btAdmin_Click(object sender, EventArgs e)
+        {
+            Anadir_Clientes ac = new Anadir_Clientes();
+            ac.ShowDialog();
         }
     }
 }

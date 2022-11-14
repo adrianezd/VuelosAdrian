@@ -44,6 +44,7 @@
             this.lbCalendarVuelta = new System.Windows.Forms.Label();
             this.lbCalendarIda = new System.Windows.Forms.Label();
             this.lbCompraHecha = new System.Windows.Forms.Label();
+            this.btAdmin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cBoxIda
@@ -182,11 +183,22 @@
             this.lbCompraHecha.Size = new System.Drawing.Size(0, 16);
             this.lbCompraHecha.TabIndex = 14;
             // 
+            // btAdmin
+            // 
+            this.btAdmin.Location = new System.Drawing.Point(713, 12);
+            this.btAdmin.Name = "btAdmin";
+            this.btAdmin.Size = new System.Drawing.Size(75, 23);
+            this.btAdmin.TabIndex = 15;
+            this.btAdmin.Text = "admin";
+            this.btAdmin.UseVisualStyleBackColor = true;
+            this.btAdmin.Click += new System.EventHandler(this.btAdmin_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Controls.Add(this.btAdmin);
             this.Controls.Add(this.lbCompraHecha);
             this.Controls.Add(this.lbCalendarVuelta);
             this.Controls.Add(this.lbCalendarIda);
@@ -228,6 +240,7 @@
         private System.Windows.Forms.Label lbCalendarVuelta;
         private System.Windows.Forms.Label lbCalendarIda;
         private System.Windows.Forms.Label lbCompraHecha;
+        private System.Windows.Forms.Button btAdmin;
     }
 }
 
