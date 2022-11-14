@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,7 @@ namespace VuelosAdrian
 
         private void btSelectVuelta_Click(object sender, EventArgs e)
         {
-            if(btSelectVuelta.Text == "Seleccionar vuelo de vuelta")
+            if (btSelectVuelta.Text == "Seleccionar vuelo de vuelta")
             {
                 btSelectVuelta.Text = "No seleccionar vuelta";
                 monthCalendarVuelta.Visible = false;
@@ -51,29 +52,34 @@ namespace VuelosAdrian
 
         private void btComprar_Click(object sender, EventArgs e)
         {
-            if (cBoxIda.SelectedIndex == -1 || cBoxVuelta.SelectedIndex == -1 || lbFechaIda.Text== "Con fecha de ida:")
+            bool soloida = false;
+            if (cBoxIda.SelectedIndex == -1 || cBoxVuelta.SelectedIndex == -1 || lbFechaIda.Text == "Con fecha de ida:")
             {
                 MessageBox.Show("Falta información del vuelo", "Error en la compra", MessageBoxButtons.OKCancel);
             }
             else
             {
-                DialogResult resultado = MessageBox.Show("Esta seguro de comprar este billete", "Compra billetes", MessageBoxButtons.YesNo);
-                if(resultado == DialogResult.Yes)
+                if (lbFechaVuelta.Visible == false)
                 {
-                    if(btSelectVuelta.Text == "Seleccionar vuelo de vuelta")
-                        MessageBox.Show("El usuario ha comprado un billete" + cBoxIda.Text  + "-" + cBoxVuelta.Text + lbFechaIda.Text + lbFechaVuelta.Text, "Error en la compra", MessageBoxButtons.OK);
-                    else
-                    {
-                        MessageBox.Show("El usuario ha comprado un billete" + cBoxIda.Text + "-" + cBoxVuelta.Text + lbFechaIda.Text, "Error en la compra", MessageBoxButtons.OK);
-                    }
+                    soloida = true;
+                    Form2 form2 = new Form2(cBoxIda.SelectedItem.ToString(), cBoxVuelta.SelectedItem.ToString(), monthCalendarIda.SelectionStart, monthCalendarVuelta.SelectionStart, soloida);
+                    form2.ShowDialog();
+                    lbCompraHecha.Text = form2.datos;
+                    Billete b = form2.billeteDevuelto;
+                    b.Mostrar();
                 }
-
                 else
                 {
-                    MessageBox.Show("No pasa nada, ya cambiará de opinión", "Error en la compra", MessageBoxButtons.OKCancel);
+                    Form2 form2 = new Form2(cBoxIda.SelectedItem.ToString(), cBoxVuelta.SelectedItem.ToString(), monthCalendarIda.SelectionStart, monthCalendarVuelta.SelectionStart, soloida);
+                    form2.ShowDialog();
+                    lbCompraHecha.Text = form2.datos;
+                    Billete b = form2.billeteDevuelto;
+                    b.Mostrar();
                 }
+
+
             }
-           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -103,22 +109,13 @@ namespace VuelosAdrian
             }
             cBoxIda.Items.Remove(cBoxVuelta.SelectedItem);
 
-            //foreach(String elegido in cBoxIda.Items)
-            //{
-            //    if (elegido == cBoxIda.SelectedItem.ToString())
-            //    {
-            //        cBoxIda.Items.Remove(cBoxVuelta.SelectedItem);
-            //        cBoxVuelta.Items.Remove(cBoxVuelta.SelectedItem);
-            //    }
-            //}
-
         }
 
         private void cBoxVuelta_MouseClick(object sender, MouseEventArgs e)
         {
 
             List<String> ciudades = new List<string>(new string[] { "Madrid", "Barcelona", "Bilbao", "Valencia" });
-            if (cBoxVuelta.SelectedIndex != -1 && cBoxIda.SelectedIndex !=-1)
+            if (cBoxVuelta.SelectedIndex != -1 && cBoxIda.SelectedIndex != -1)
             {
                 Object indiceVuelta = cBoxVuelta.SelectedItem;
                 Object indiceIda = cBoxIda.SelectedItem;
@@ -161,7 +158,8 @@ namespace VuelosAdrian
 
         private void monthCalendarVuelta_DateChanged(object sender, DateRangeEventArgs e)
         {
-            if (String.IsNullOrEmpty(monthCalendarVuelta.SelectionRange.Start.ToString())){
+            if (String.IsNullOrEmpty(monthCalendarVuelta.SelectionRange.Start.ToString()))
+            {
                 lbFechaVuelta.Text += monthCalendarVuelta.SelectionRange.Start.ToShortDateString();
             }
             else
@@ -177,7 +175,7 @@ namespace VuelosAdrian
             if (cBoxVuelta.SelectedIndex != -1 && cBoxIda.SelectedIndex != -1)
             {
                 Object indiceVuelta = cBoxVuelta.SelectedItem;
-                Object indiceIda= cBoxIda.SelectedItem;
+                Object indiceIda = cBoxIda.SelectedItem;
                 cBoxIda.Items.Clear();
                 cBoxVuelta.Items.Clear();
                 foreach (string c in ciudades)

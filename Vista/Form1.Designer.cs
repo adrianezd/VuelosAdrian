@@ -43,6 +43,7 @@
             this.btComprar = new System.Windows.Forms.Button();
             this.lbCalendarVuelta = new System.Windows.Forms.Label();
             this.lbCalendarIda = new System.Windows.Forms.Label();
+            this.lbCompraHecha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cBoxIda
@@ -147,7 +148,7 @@
             // 
             // btComprar
             // 
-            this.btComprar.Location = new System.Drawing.Point(325, 383);
+            this.btComprar.Location = new System.Drawing.Point(320, 406);
             this.btComprar.Name = "btComprar";
             this.btComprar.Size = new System.Drawing.Size(131, 55);
             this.btComprar.TabIndex = 11;
@@ -173,11 +174,20 @@
             this.lbCalendarIda.TabIndex = 12;
             this.lbCalendarIda.Text = "Fecha de ida";
             // 
+            // lbCompraHecha
+            // 
+            this.lbCompraHecha.AutoSize = true;
+            this.lbCompraHecha.Location = new System.Drawing.Point(109, 473);
+            this.lbCompraHecha.Name = "lbCompraHecha";
+            this.lbCompraHecha.Size = new System.Drawing.Size(0, 16);
+            this.lbCompraHecha.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Controls.Add(this.lbCompraHecha);
             this.Controls.Add(this.lbCalendarVuelta);
             this.Controls.Add(this.lbCalendarIda);
             this.Controls.Add(this.btComprar);
@@ -217,6 +227,7 @@
         private System.Windows.Forms.Button btComprar;
         private System.Windows.Forms.Label lbCalendarVuelta;
         private System.Windows.Forms.Label lbCalendarIda;
+        private System.Windows.Forms.Label lbCompraHecha;
     }
 }
 
