@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VuelosAdrian.Administrador
+namespace VuelosAdrian
 {
     public partial class Anadir_Clientes : Form
     {
@@ -72,9 +72,7 @@ namespace VuelosAdrian.Administrador
             index = e.RowIndex;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
+
     }
 }

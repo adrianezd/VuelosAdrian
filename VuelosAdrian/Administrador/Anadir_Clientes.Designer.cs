@@ -1,4 +1,4 @@
-﻿namespace VuelosAdrian.Administrador
+﻿namespace VuelosAdrian
 {
     partial class Anadir_Clientes
     {
@@ -145,7 +145,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(604, 150);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Nombre
             // 
@@ -192,7 +191,7 @@
             this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.btAnadir);
             this.Name = "Anadir_Clientes";
-            this.Text = "Anadir_Clientes";
+            this.Text = "Añadir_cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

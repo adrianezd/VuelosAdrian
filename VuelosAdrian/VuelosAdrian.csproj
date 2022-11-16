@@ -67,25 +67,60 @@
     <Compile Include="Administrador\Anadir_Clientes.Designer.cs">
       <DependentUpon>Anadir_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\Menu_administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Menu_administrador.Designer.cs">
+      <DependentUpon>Menu_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Menu_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Menu_cliente.Designer.cs">
+      <DependentUpon>Menu_cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Billete.cs" />
+    <Compile Include="Modelo\Billetes.cs" />
     <Compile Include="Modelo\Persona.cs" />
+    <Compile Include="Modelo\Personas.cs" />
     <Compile Include="Modelo\Vuelo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Administrador\Anadir_Clientes.resx">
       <DependentUpon>Anadir_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Menu_administrador.resx">
+      <DependentUpon>Menu_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Menu_cliente.resx">
+      <DependentUpon>Menu_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,12 +131,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vista\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,6 +155,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vista\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -185,7 +185,7 @@
             // 
             // btAdmin
             // 
-            this.btAdmin.Location = new System.Drawing.Point(713, 12);
+            this.btAdmin.Location = new System.Drawing.Point(713, 498);
             this.btAdmin.Name = "btAdmin";
             this.btAdmin.Size = new System.Drawing.Size(75, 23);
             this.btAdmin.TabIndex = 15;

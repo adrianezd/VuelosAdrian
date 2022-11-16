@@ -1,0 +1,4 @@
+7 -> Se cierra la aplicacion porque se borra la instancia del form principal que ejecutamos al arrancar la aplicacion.
+8 -> Podemos hacer que no se vea la contraseña, con una opcion del textbox que es PasswordChar, doonde la puedes rellenar con el carácter que quieras que se vea en vez de la contraseña.
+9 -> No nos interesa en ningun caso que vuelva al login una vez ha iniciado sesión. Si se deja abierto, que no se pueda interactuar con el de nuevo si no se cierra el form donde estas, para que no te loguees varias veces a la vez.
+10 -> Porque no están en la misma carpeta que los formularios, y cuando creas una clase o un form por defecto, te lo crea con namespace .carpeta, y no queremos eso.

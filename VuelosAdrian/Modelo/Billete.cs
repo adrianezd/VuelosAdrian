@@ -13,6 +13,10 @@ namespace Modelos
         private Vuelo vueloVuelta;
         private bool ida_vuelta;
 
+        public Billete()
+        {
+
+        }
         public Billete(Persona p, Vuelo vueloIda, Vuelo vueloVuelta)
         {
             this.p = p;
