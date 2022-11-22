@@ -53,7 +53,14 @@ namespace VuelosAdrian
 
         private void btHistorico_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Entrada.listBilletes.DameBilletesDni(dniCliente).ToArray().ToString(), "Vuelos");
+            List<Billete> datos = Entrada.listBilletes.DameBilletesDni2(dniCliente);
+            if (datos.Count != 0)
+            {
+                foreach (Billete b in datos)
+                {
+                    MessageBox.Show(b.DatosBillete(), "Vuelos");
+                }
+            }
         }
 
         private void Menu_cliente_Load(object sender, EventArgs e)

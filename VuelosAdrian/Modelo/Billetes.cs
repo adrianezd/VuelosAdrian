@@ -45,6 +45,18 @@ namespace VuelosAdrian
             }
             return null;
         }
+        public List<Billete> DameBilletesDni2(string dni)
+        {
+            List<Billete> billetesEncontrados = new List<Billete>();
+            foreach(Billete b in lista_billetes.Values)
+            {
+                if(b.P.Dni == dni)
+                {
+                    billetesEncontrados.Add(b);
+                }
+            }
+            return billetesEncontrados;
+        }
         public bool Anadir_billete(Billete b)
         {
             lista_billetes.Add(b.Id,b);

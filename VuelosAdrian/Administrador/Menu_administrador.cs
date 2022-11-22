@@ -48,5 +48,10 @@ namespace VuelosAdrian
                 s.Label = p.Nombre;
             }
         }
+
+        private void Menu_administrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
