@@ -1,34 +1,60 @@
-﻿using Modelos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VuelosAdrian.Modelo
+namespace VuelosAdrian
 {
     public class Personas
     {
-        private List<Persona> lista_personas;
+        public static List<Persona> lista_personas;
 
         public Personas()
         {
-            this.lista_personas = new List<Persona>();
+            lista_personas = new List<Persona>();
         }
 
         public Personas(List<Persona> lista_personas)
         {
-            this.lista_personas = lista_personas;
+            lista_personas = lista_personas;
         }
 
         public bool Dni_existe(string dni)
         {
             return true;
         }
-        public bool Anadir_persona(Persona p)
+        public void Anadir_persona(Persona p)
         {
             lista_personas.Add(p);
-            return true;
         }
+
+        public Persona DamePersona(string dni)
+        {
+            foreach (Persona p in lista_personas)
+            {
+                if (p.Dni == dni)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public void LeerPersona()
+        {
+            foreach (Persona p in lista_personas)
+            {
+                Console.WriteLine(p);
+            }
+        }
+
+        public bool Eliminar_persona(Persona p)
+        {
+            return lista_personas.Remove(p);
+        }
+
+
     }
 }

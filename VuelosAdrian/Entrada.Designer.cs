@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btLoguear = new System.Windows.Forms.Button();
-            this.lbNombre = new System.Windows.Forms.Label();
+            this.lbDni = new System.Windows.Forms.Label();
             this.lbContra = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tbDni = new System.Windows.Forms.TextBox();
             this.tbContrasena = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -45,14 +45,14 @@
             this.btLoguear.UseVisualStyleBackColor = true;
             this.btLoguear.Click += new System.EventHandler(this.btLoguear_Click);
             // 
-            // lbNombre
+            // lbDni
             // 
-            this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(77, 58);
-            this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(56, 16);
-            this.lbNombre.TabIndex = 1;
-            this.lbNombre.Text = "Nombre";
+            this.lbDni.AutoSize = true;
+            this.lbDni.Location = new System.Drawing.Point(77, 58);
+            this.lbDni.Name = "lbDni";
+            this.lbDni.Size = new System.Drawing.Size(27, 16);
+            this.lbDni.TabIndex = 1;
+            this.lbDni.Text = "Dni";
             // 
             // lbContra
             // 
@@ -63,12 +63,12 @@
             this.lbContra.TabIndex = 2;
             this.lbContra.Text = "Contraseña";
             // 
-            // tbNombre
+            // tbDni
             // 
-            this.tbNombre.Location = new System.Drawing.Point(211, 58);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(100, 22);
-            this.tbNombre.TabIndex = 3;
+            this.tbDni.Location = new System.Drawing.Point(211, 58);
+            this.tbDni.Name = "tbDni";
+            this.tbDni.Size = new System.Drawing.Size(100, 22);
+            this.tbDni.TabIndex = 3;
             // 
             // tbContrasena
             // 
@@ -77,7 +77,6 @@
             this.tbContrasena.PasswordChar = '*';
             this.tbContrasena.Size = new System.Drawing.Size(100, 22);
             this.tbContrasena.TabIndex = 4;
-            this.tbContrasena.TextChanged += new System.EventHandler(this.tbContrasena_TextChanged);
             // 
             // Entrada
             // 
@@ -85,12 +84,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 230);
             this.Controls.Add(this.tbContrasena);
-            this.Controls.Add(this.tbNombre);
+            this.Controls.Add(this.tbDni);
             this.Controls.Add(this.lbContra);
-            this.Controls.Add(this.lbNombre);
+            this.Controls.Add(this.lbDni);
             this.Controls.Add(this.btLoguear);
             this.Name = "Entrada";
             this.Text = "Entrada";
+            this.Load += new System.EventHandler(this.Entrada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,9 +99,9 @@
         #endregion
 
         private System.Windows.Forms.Button btLoguear;
-        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Label lbDni;
         private System.Windows.Forms.Label lbContra;
-        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox tbDni;
         private System.Windows.Forms.TextBox tbContrasena;
     }
 }

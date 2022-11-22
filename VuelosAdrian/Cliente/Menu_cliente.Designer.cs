@@ -33,7 +33,7 @@
             this.btHistorico = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbID = new System.Windows.Forms.TextBox();
+            this.tbBuscarVuelo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             this.btVervuelo.TabIndex = 1;
             this.btVervuelo.Text = "Ver mi vuelo";
             this.btVervuelo.UseVisualStyleBackColor = true;
+            this.btVervuelo.Click += new System.EventHandler(this.btVervuelo_Click);
             // 
             // btHistorico
             // 
@@ -64,6 +65,7 @@
             this.btHistorico.TabIndex = 2;
             this.btHistorico.Text = "Ver histórico";
             this.btHistorico.UseVisualStyleBackColor = true;
+            this.btHistorico.Click += new System.EventHandler(this.btHistorico_Click);
             // 
             // btSalir
             // 
@@ -77,7 +79,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbID);
+            this.groupBox1.Controls.Add(this.tbBuscarVuelo);
             this.groupBox1.Controls.Add(this.btVervuelo);
             this.groupBox1.Location = new System.Drawing.Point(49, 129);
             this.groupBox1.Name = "groupBox1";
@@ -86,12 +88,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mi vuelo";
             // 
-            // tbID
+            // tbBuscarVuelo
             // 
-            this.tbID.Location = new System.Drawing.Point(45, 75);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(166, 22);
-            this.tbID.TabIndex = 2;
+            this.tbBuscarVuelo.Location = new System.Drawing.Point(45, 75);
+            this.tbBuscarVuelo.Name = "tbBuscarVuelo";
+            this.tbBuscarVuelo.Size = new System.Drawing.Size(166, 22);
+            this.tbBuscarVuelo.TabIndex = 2;
             // 
             // Menu_cliente
             // 
@@ -104,6 +106,7 @@
             this.Controls.Add(this.btComprarBillete);
             this.Name = "Menu_cliente";
             this.Text = "Menu_cliente";
+            this.Load += new System.EventHandler(this.Menu_cliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -117,6 +120,6 @@
         private System.Windows.Forms.Button btHistorico;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.TextBox tbBuscarVuelo;
     }
 }

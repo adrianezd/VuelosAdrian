@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace VuelosAdrian
 {
     public class Vuelo
     {
@@ -25,6 +25,10 @@ namespace Modelos
             this.destino = destino;
             this.fecha = fecha;
         }
+
+        public string Origen { get => origen; set => origen = value; }
+        public string Destino { get => destino; set => destino = value; }
+        public DateTime Fecha { get => fecha; set => fecha = value; }
 
         public void Mostrar()
         {

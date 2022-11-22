@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace VuelosAdrian
 {
@@ -32,6 +34,19 @@ namespace VuelosAdrian
         private void btCrearAeropuertos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btVerBilletes_Click(object sender, EventArgs e)
+        {
+            chart1.Visible = true;
+            foreach (Persona p in Personas.lista_personas)
+            {
+                Debug.WriteLine(p.Dni);
+                Console.WriteLine("el dni" + Entrada.listBilletes.Num_vuelos_p(p.Dni));
+                Series s = chart1.Series.Add(p.Nombre);
+                s.Points.Add(Entrada.listBilletes.Num_vuelos_p(p.Dni));
+                s.Label = p.Nombre;
+            }
         }
     }
 }

@@ -1,41 +1,68 @@
-﻿using Modelos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VuelosAdrian.Modelo
+namespace VuelosAdrian
 {
     public class Billetes
     {
-        private List<Billete> lista_billetes;
+        public Dictionary<int,Billete> lista_billetes;
         public Billetes()
         {
-            lista_billetes = new List<Billete>();
+            lista_billetes = new Dictionary<int,Billete>();
         }
 
-        public Billetes(List<Billete> lista_billetes)
+        public Billetes(Dictionary<int,Billete> lista_billetes)
         {
             this.lista_billetes = lista_billetes;
         }
 
         public Billete Buscar_id(int id)
         {
-            return new Billete();
+            foreach (Billete b in lista_billetes.Values)
+            {
+                if (b.Id == id) { return b; }
+            }
+            return null;
+        }
+        public Billete Buscar_id2(string dni)
+        {
+            if (dni != "")
+            {
+                return lista_billetes.Values.FirstOrDefault(billete => billete.P.Dni == dni);
+            }
+            return null;
+        }
+        public List<Billete> DameBilletesDni(string dni)
+        {
+            if (dni != "")
+            {
+                var a = lista_billetes.Values.ToList();
+                return a.FindAll(billete => billete.P.Dni == dni);
+            }
+            return null;
         }
         public bool Anadir_billete(Billete b)
         {
-            lista_billetes.Add(b);
+            lista_billetes.Add(b.Id,b);
             return true;
         }
-        public Billete Buscar_dni(string dni)
+
+        public int Num_vuelos_p(string dni)
         {
-            return new Billete();
+            var a = lista_billetes.Values.ToList();
+            return a.FindAll(billete => billete.P.Dni == dni).Count;
         }
-        public string Mostrar_dni(string dni)
+
+        public bool Eliminar_billete(string dni)
         {
-            return "";
+            var a = lista_billetes.Values.ToList();
+            Billete b = Buscar_id2(dni);
+            a.RemoveAll(Billete => Billete.P.Dni == dni);
+            return true;
         }
 
     }

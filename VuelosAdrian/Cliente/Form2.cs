@@ -1,5 +1,4 @@
-﻿using Modelos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +12,7 @@ namespace VuelosAdrian
 {
     public partial class Form2 : Form
     {
+        public static Billetes listBilletes = new Billetes();
         public string datos = "";
         public bool soloidaGLOBAL = false;
         public Billete billeteDevuelto = null;
@@ -63,11 +63,11 @@ namespace VuelosAdrian
             {
                 tbNombre.BackColor = SystemColors.Window; tbApellidos.BackColor = SystemColors.Window; tbDireccion.BackColor = SystemColors.Window; tbDni.BackColor = SystemColors.Window;
                 datos = DameDatos();
-                Persona p = new Persona(tbNombre.Text, tbApellidos.Text, tbDireccion.Text, tbDni.Text);
+                Persona p = new Persona(tbNombre.Text, tbApellidos.Text, tbDireccion.Text, tbDni.Text,8);
                 Vuelo v1 = new Vuelo(tbOrigen.Text, tbDestino.Text, DateTime.Parse(tbIda.Text));
                 if (soloidaGLOBAL)
                 {
-                    Billete b = new Billete(p, v1);
+                    Billete b = new Billete( p, v1);
                     billeteDevuelto = b;
                 }
                 else
