@@ -59,7 +59,7 @@
             // 
             // btHistorico
             // 
-            this.btHistorico.Location = new System.Drawing.Point(49, 292);
+            this.btHistorico.Location = new System.Drawing.Point(58, 293);
             this.btHistorico.Name = "btHistorico";
             this.btHistorico.Size = new System.Drawing.Size(228, 23);
             this.btHistorico.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(49, 356);
+            this.btSalir.Location = new System.Drawing.Point(58, 356);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(228, 23);
             this.btSalir.TabIndex = 3;

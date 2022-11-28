@@ -14,6 +14,7 @@ namespace VuelosAdrian
     {
 
         public static int index = -2;
+        BindingSource bindingSource = new BindingSource();
         public Anadir_Clientes()
         {
             InitializeComponent();
@@ -52,21 +53,16 @@ namespace VuelosAdrian
             else
             {
                 tbNombre.BackColor = SystemColors.Window; tbApellidos.BackColor = SystemColors.Window; tbDireccion.BackColor = SystemColors.Window; tbDni.BackColor = SystemColors.Window;tbContra.BackColor = SystemColors.Window;
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = tbNombre.Text;
-                dataGridView1.Rows[n].Cells[1].Value = tbApellidos.Text;
-                dataGridView1.Rows[n].Cells[2].Value = tbDireccion.Text;
-                dataGridView1.Rows[n].Cells[3].Value = tbDni.Text;
                 if (checkBox1.Checked)
                 {
                     Persona p = new Persona(tbNombre.Text, tbApellidos.Text, tbDireccion.Text, tbDni.Text, Convert.ToInt32(Math.Round(numericUpDown1.Value, 0)));
-                    dataGridView1.Rows[n].Cells[4].Value = p.Contrasena;
+                    bindingSource.Add(p);
                     Personas.lista_personas.Add(p);
                 }
                 else
                 {
-                    dataGridView1.Rows[n].Cells[4].Value = tbContra.Text;
                     Persona p = new Persona(tbNombre.Text, tbApellidos.Text, tbDireccion.Text, tbDni.Text, tbContra.Text);
+                    bindingSource.Add(p);
                     Personas.lista_personas.Add(p);
                 }
 
@@ -82,9 +78,9 @@ namespace VuelosAdrian
             else
             {
                 DialogResult resultado = MessageBox.Show("¿Este cliente tiene billetes asociados, desea eliminarlos?", "Alert");
-                if (resultado == DialogResult.Yes)
+                if (resultado == DialogResult.OK)
                 {
-                    dataGridView1.Rows.RemoveAt(index);
+                    bindingSource.RemoveCurrent();
                     MessageBox.Show("Borrado con éxito");
                 }
                 else
@@ -105,13 +101,10 @@ namespace VuelosAdrian
         {
             foreach(Persona p in Personas.lista_personas)
             {
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = p.Nombre;
-                dataGridView1.Rows[n].Cells[1].Value = p.Apellidos;
-                dataGridView1.Rows[n].Cells[2].Value = p.Direccion;
-                dataGridView1.Rows[n].Cells[3].Value = p.Dni;
-                dataGridView1.Rows[n].Cells[4].Value = p.Contrasena;
+                bindingSource.Add(p);
+
             }
+            dataGridView1.DataSource = bindingSource;
             this.dataGridView1.Columns["dni"].Visible = false;
         }
 
@@ -134,6 +127,10 @@ namespace VuelosAdrian
                 }
             }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 

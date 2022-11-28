@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.btCrearAeropuertos = new System.Windows.Forms.Button();
             this.btAddCliente = new System.Windows.Forms.Button();
             this.btVerBilletes = new System.Windows.Forms.Button();
@@ -96,10 +96,10 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(351, 76);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(300, 300);
@@ -125,6 +125,7 @@
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar Fichero";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbFichero
             // 
@@ -143,7 +144,7 @@
             this.groupBox1.Size = new System.Drawing.Size(364, 161);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Abrir Archivo";
             // 
             // openFileDialog1
             // 
@@ -164,7 +165,6 @@
             this.Controls.Add(this.btCrearAeropuertos);
             this.Name = "Menu_administrador";
             this.Text = "Menu_administrador";
-            this.Load += new System.EventHandler(this.Menu_administrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

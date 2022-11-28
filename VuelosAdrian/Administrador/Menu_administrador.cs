@@ -49,14 +49,17 @@ namespace VuelosAdrian
             }
         }
 
-        private void Menu_administrador_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCargar_Click(object sender, EventArgs e)
         {
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tbFichero.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 tbFichero.Text = openFileDialog1.FileName;
             }

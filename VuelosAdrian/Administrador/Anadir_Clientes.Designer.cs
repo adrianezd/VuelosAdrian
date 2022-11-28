@@ -43,11 +43,6 @@
             this.lbContra = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +51,7 @@
             // 
             this.btAnadir.Location = new System.Drawing.Point(428, 38);
             this.btAnadir.Name = "btAnadir";
-            this.btAnadir.Size = new System.Drawing.Size(306, 112);
+            this.btAnadir.Size = new System.Drawing.Size(416, 112);
             this.btAnadir.TabIndex = 0;
             this.btAnadir.Text = "Añadir";
             this.btAnadir.UseVisualStyleBackColor = true;
@@ -66,7 +61,7 @@
             // 
             this.btBorrar.Location = new System.Drawing.Point(428, 164);
             this.btBorrar.Name = "btBorrar";
-            this.btBorrar.Size = new System.Drawing.Size(306, 121);
+            this.btBorrar.Size = new System.Drawing.Size(416, 106);
             this.btBorrar.TabIndex = 1;
             this.btBorrar.Text = "Borrar";
             this.btBorrar.UseVisualStyleBackColor = true;
@@ -139,12 +134,6 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellidos,
-            this.Direccion,
-            this.DNI,
-            this.Contraseña});
             this.dataGridView1.Location = new System.Drawing.Point(47, 317);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -152,6 +141,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(846, 217);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tbContra
             // 
@@ -193,41 +183,6 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.MinimumWidth = 6;
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.Width = 125;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.MinimumWidth = 6;
-            this.Direccion.Name = "Direccion";
-            this.Direccion.Width = 125;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.MinimumWidth = 6;
-            this.DNI.Name = "DNI";
-            this.DNI.Width = 125;
-            // 
-            // Contraseña
-            // 
-            this.Contraseña.HeaderText = "Contraseña";
-            this.Contraseña.MinimumWidth = 6;
-            this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Width = 125;
-            // 
             // Anadir_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,7 +204,7 @@
             this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.btAnadir);
             this.Name = "Anadir_Clientes";
-            this.Text = "Añadir_cliente";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Anadir_Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -275,10 +230,5 @@
         private System.Windows.Forms.Label lbContra;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
     }
 }
