@@ -9,15 +9,15 @@ namespace VuelosAdrian
 {
     public class Billetes
     {
-        public Dictionary<int,Billete> lista_billetes;
+        public static Dictionary<int,Billete> lista_billetes;
         public Billetes()
         {
             lista_billetes = new Dictionary<int,Billete>();
         }
 
-        public Billetes(Dictionary<int,Billete> lista_billetes)
+        public Billetes(Dictionary<int,Billete> lb)
         {
-            this.lista_billetes = lista_billetes;
+            lista_billetes = lb;
         }
 
         public Billete Buscar_id(int id)

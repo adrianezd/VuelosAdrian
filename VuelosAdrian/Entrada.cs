@@ -15,6 +15,7 @@ namespace VuelosAdrian
     {
         public static Personas listPers = new Personas();
         public static Billetes listBilletes = new Billetes();
+        public static Aeropuertos listAeropuertos = new Aeropuertos();
 
 
         public Entrada()
@@ -26,7 +27,6 @@ namespace VuelosAdrian
         {
                 if (tbDni.Text == "admin" && tbContrasena.Text == "1234")
                 {
-
                     Menu_administrador a1 = new Menu_administrador();
                     a1.Show();
                     this.Close();
@@ -73,6 +73,11 @@ namespace VuelosAdrian
             listBilletes.Anadir_billete(b1);
             listBilletes.Anadir_billete(b2);
             listBilletes.Anadir_billete(b3);
+            Aeropuerto a1 = new Aeropuerto("Madrid");
+            Aeropuerto a2 = new Aeropuerto("Barcelona");
+            Aeropuerto a3 = new Aeropuerto("Bilbao");
+            Aeropuerto a4 = new Aeropuerto("Valencia");
+            listAeropuertos.Anadir_Aeropuerto(a1);listAeropuertos.Anadir_Aeropuerto(a2);listAeropuertos.Anadir_Aeropuerto(a3);listAeropuertos.Anadir_Aeropuerto(a4);
         }
     }
 }

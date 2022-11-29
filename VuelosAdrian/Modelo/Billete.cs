@@ -69,7 +69,7 @@ namespace VuelosAdrian
             else
             {
                 return "Compra realizada con éxito para: " + Environment.NewLine + p.ToString() + Environment.NewLine + vueloIda.ToString() + Environment.NewLine + vueloVuelta.ToString();
-            }
+            }                                                                      
 
         }
 

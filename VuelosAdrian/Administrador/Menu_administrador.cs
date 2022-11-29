@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using VuelosAdrian.Administrador;
 
 namespace VuelosAdrian
 {
@@ -33,7 +34,9 @@ namespace VuelosAdrian
 
         private void btCrearAeropuertos_Click(object sender, EventArgs e)
         {
-
+            PanelAeropuerto m1 = new PanelAeropuerto();
+            m1.ShowDialog();
+            this.Close();
         }
 
         private void btVerBilletes_Click(object sender, EventArgs e)
@@ -63,6 +66,13 @@ namespace VuelosAdrian
             {
                 tbFichero.Text = openFileDialog1.FileName;
             }
+        }
+
+        private void btModificarBillete_Click(object sender, EventArgs e)
+        {
+            PanelBilletes m1 = new PanelBilletes();
+            m1.ShowDialog();
+            this.Close();
         }
     }
 }

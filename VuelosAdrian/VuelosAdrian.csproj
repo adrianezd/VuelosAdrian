@@ -74,6 +74,18 @@
     <Compile Include="Administrador\Menu_administrador.Designer.cs">
       <DependentUpon>Menu_administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\PanelAeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\PanelAeropuerto.Designer.cs">
+      <DependentUpon>PanelAeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PanelBilletes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\PanelBilletes.Designer.cs">
+      <DependentUpon>PanelBilletes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,8 @@
     <Compile Include="Cliente\Menu_cliente.Designer.cs">
       <DependentUpon>Menu_cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Aeropuerto.cs" />
+    <Compile Include="Modelo\Aeropuertos.cs" />
     <Compile Include="Modelo\Billete.cs" />
     <Compile Include="Modelo\Billetes.cs" />
     <Compile Include="Modelo\Persona.cs" />
@@ -110,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\Menu_administrador.resx">
       <DependentUpon>Menu_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\PanelAeropuerto.resx">
+      <DependentUpon>PanelAeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\PanelBilletes.resx">
+      <DependentUpon>PanelBilletes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
