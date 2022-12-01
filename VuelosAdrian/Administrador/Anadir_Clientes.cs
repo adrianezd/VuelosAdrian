@@ -131,6 +131,61 @@ namespace VuelosAdrian
         {
 
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbContra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbContra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbApellidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDNI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDireccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbApellidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

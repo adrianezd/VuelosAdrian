@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_cliente));
             this.btComprarBillete = new System.Windows.Forms.Button();
             this.btVervuelo = new System.Windows.Forms.Button();
             this.btHistorico = new System.Windows.Forms.Button();
@@ -39,9 +40,9 @@
             // 
             // btComprarBillete
             // 
-            this.btComprarBillete.Location = new System.Drawing.Point(49, 72);
+            this.btComprarBillete.Location = new System.Drawing.Point(49, 52);
             this.btComprarBillete.Name = "btComprarBillete";
-            this.btComprarBillete.Size = new System.Drawing.Size(247, 23);
+            this.btComprarBillete.Size = new System.Drawing.Size(247, 43);
             this.btComprarBillete.TabIndex = 0;
             this.btComprarBillete.Text = "Comprar billete";
             this.btComprarBillete.UseVisualStyleBackColor = true;
@@ -51,7 +52,7 @@
             // 
             this.btVervuelo.Location = new System.Drawing.Point(45, 32);
             this.btVervuelo.Name = "btVervuelo";
-            this.btVervuelo.Size = new System.Drawing.Size(166, 23);
+            this.btVervuelo.Size = new System.Drawing.Size(166, 37);
             this.btVervuelo.TabIndex = 1;
             this.btVervuelo.Text = "Ver mi vuelo";
             this.btVervuelo.UseVisualStyleBackColor = true;
@@ -61,7 +62,7 @@
             // 
             this.btHistorico.Location = new System.Drawing.Point(58, 293);
             this.btHistorico.Name = "btHistorico";
-            this.btHistorico.Size = new System.Drawing.Size(228, 23);
+            this.btHistorico.Size = new System.Drawing.Size(228, 37);
             this.btHistorico.TabIndex = 2;
             this.btHistorico.Text = "Ver histórico";
             this.btHistorico.UseVisualStyleBackColor = true;
@@ -71,7 +72,7 @@
             // 
             this.btSalir.Location = new System.Drawing.Point(58, 356);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(228, 23);
+            this.btSalir.Size = new System.Drawing.Size(228, 40);
             this.btSalir.TabIndex = 3;
             this.btSalir.Text = "Salir de la aplicación";
             this.btSalir.UseVisualStyleBackColor = true;
@@ -83,14 +84,14 @@
             this.groupBox1.Controls.Add(this.btVervuelo);
             this.groupBox1.Location = new System.Drawing.Point(49, 129);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 128);
+            this.groupBox1.Size = new System.Drawing.Size(247, 143);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mi vuelo";
             // 
             // tbBuscarVuelo
             // 
-            this.tbBuscarVuelo.Location = new System.Drawing.Point(45, 75);
+            this.tbBuscarVuelo.Location = new System.Drawing.Point(45, 91);
             this.tbBuscarVuelo.Name = "tbBuscarVuelo";
             this.tbBuscarVuelo.Size = new System.Drawing.Size(166, 22);
             this.tbBuscarVuelo.TabIndex = 2;
@@ -104,9 +105,9 @@
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btHistorico);
             this.Controls.Add(this.btComprarBillete);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu_cliente";
             this.Text = "Menu_cliente";
-            this.Load += new System.EventHandler(this.Menu_cliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

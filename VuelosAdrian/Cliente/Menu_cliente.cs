@@ -62,10 +62,5 @@ namespace VuelosAdrian
                 }
             }
         }
-
-        private void Menu_cliente_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

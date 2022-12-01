@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entrada));
             this.btLoguear = new System.Windows.Forms.Button();
             this.lbDni = new System.Windows.Forms.Label();
             this.lbContra = new System.Windows.Forms.Label();
             this.tbDni = new System.Windows.Forms.TextBox();
             this.tbContrasena = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btLoguear
@@ -78,19 +81,33 @@
             this.tbContrasena.Size = new System.Drawing.Size(100, 22);
             this.tbContrasena.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VuelosAdrian.Properties.Resources._695940657_226470021_1706x960;
+            this.pictureBox1.InitialImage = global::VuelosAdrian.Properties.Resources._695940657_226470021_1706x9601;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(317, 206);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 230);
+            this.ClientSize = new System.Drawing.Size(410, 262);
             this.Controls.Add(this.tbContrasena);
             this.Controls.Add(this.tbDni);
             this.Controls.Add(this.lbContra);
             this.Controls.Add(this.lbDni);
             this.Controls.Add(this.btLoguear);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Entrada";
             this.Text = "Entrada";
             this.Load += new System.EventHandler(this.Entrada_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +120,6 @@
         private System.Windows.Forms.Label lbContra;
         private System.Windows.Forms.TextBox tbDni;
         private System.Windows.Forms.TextBox tbContrasena;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -24,7 +24,8 @@ namespace VuelosAdrian.Administrador
 
         private void PanelBilletes_Load(object sender, EventArgs e)
         {
-            listBox1.Items.AddRange(Billetes.lista_billetes.Values.ToArray());
+            List<Billete> lista = Billetes.lista_billetes.Values.ToList();
+            listBox1.Items.AddRange(lista.ToArray());
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

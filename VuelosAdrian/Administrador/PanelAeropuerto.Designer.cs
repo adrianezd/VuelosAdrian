@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelAeropuerto));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnAnadir = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -45,22 +46,24 @@
             // 
             // btnAnadir
             // 
-            this.btnAnadir.Location = new System.Drawing.Point(517, 131);
+            this.btnAnadir.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnAnadir.Location = new System.Drawing.Point(517, 91);
             this.btnAnadir.Name = "btnAnadir";
-            this.btnAnadir.Size = new System.Drawing.Size(239, 23);
+            this.btnAnadir.Size = new System.Drawing.Size(239, 63);
             this.btnAnadir.TabIndex = 1;
             this.btnAnadir.Text = "Anadir Aeropuerto";
-            this.btnAnadir.UseVisualStyleBackColor = true;
+            this.btnAnadir.UseVisualStyleBackColor = false;
             this.btnAnadir.Click += new System.EventHandler(this.btnAnadir_Click);
             // 
             // btnBorrar
             // 
+            this.btnBorrar.BackColor = System.Drawing.Color.Crimson;
             this.btnBorrar.Location = new System.Drawing.Point(517, 160);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(239, 23);
+            this.btnBorrar.Size = new System.Drawing.Size(239, 65);
             this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Borrar Aeropuerto";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // tbAeropuerto
@@ -69,6 +72,7 @@
             this.tbAeropuerto.Name = "tbAeropuerto";
             this.tbAeropuerto.Size = new System.Drawing.Size(239, 22);
             this.tbAeropuerto.TabIndex = 4;
+            this.tbAeropuerto.Text = "Introduce ";
             // 
             // PanelAeropuerto
             // 
@@ -79,8 +83,9 @@
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnAnadir);
             this.Controls.Add(this.listBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PanelAeropuerto";
-            this.Text = "PanelAeropuerto";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.PanelAeropuerto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelBilletes));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.lbPersona = new System.Windows.Forms.Label();
@@ -35,8 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboPersonas = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboIda = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboIda = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,18 +53,19 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(533, 331);
+            this.btnModificar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnModificar.Location = new System.Drawing.Point(533, 313);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(239, 23);
+            this.btnModificar.Size = new System.Drawing.Size(239, 41);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Guardar Billete";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lbPersona
             // 
             this.lbPersona.AutoSize = true;
-            this.lbPersona.Location = new System.Drawing.Point(21, 36);
+            this.lbPersona.Location = new System.Drawing.Point(63, 36);
             this.lbPersona.Name = "lbPersona";
             this.lbPersona.Size = new System.Drawing.Size(58, 16);
             this.lbPersona.TabIndex = 4;
@@ -72,7 +74,7 @@
             // lbVueloIda
             // 
             this.lbVueloIda.AutoSize = true;
-            this.lbVueloIda.Location = new System.Drawing.Point(21, 88);
+            this.lbVueloIda.Location = new System.Drawing.Point(38, 88);
             this.lbVueloIda.Name = "lbVueloIda";
             this.lbVueloIda.Size = new System.Drawing.Size(83, 16);
             this.lbVueloIda.TabIndex = 5;
@@ -90,7 +92,7 @@
             // comboPersonas
             // 
             this.comboPersonas.FormattingEnabled = true;
-            this.comboPersonas.Location = new System.Drawing.Point(120, 33);
+            this.comboPersonas.Location = new System.Drawing.Point(128, 33);
             this.comboPersonas.Name = "comboPersonas";
             this.comboPersonas.Size = new System.Drawing.Size(121, 24);
             this.comboPersonas.TabIndex = 7;
@@ -110,21 +112,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Su vuelo es";
             // 
-            // comboIda
-            // 
-            this.comboIda.FormattingEnabled = true;
-            this.comboIda.Location = new System.Drawing.Point(120, 85);
-            this.comboIda.Name = "comboIda";
-            this.comboIda.Size = new System.Drawing.Size(121, 24);
-            this.comboIda.TabIndex = 8;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(128, 140);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(113, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 9;
+            // 
+            // comboIda
+            // 
+            this.comboIda.FormattingEnabled = true;
+            this.comboIda.Location = new System.Drawing.Point(128, 85);
+            this.comboIda.Name = "comboIda";
+            this.comboIda.Size = new System.Drawing.Size(121, 24);
+            this.comboIda.TabIndex = 8;
             // 
             // PanelBilletes
             // 
@@ -134,6 +136,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.listBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PanelBilletes";
             this.Text = "PanelBilletes";
             this.Load += new System.EventHandler(this.PanelBilletes_Load);

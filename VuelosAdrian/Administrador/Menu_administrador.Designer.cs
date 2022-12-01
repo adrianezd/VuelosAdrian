@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_administrador));
             this.btCrearAeropuertos = new System.Windows.Forms.Button();
             this.btAddCliente = new System.Windows.Forms.Button();
             this.btVerBilletes = new System.Windows.Forms.Button();
@@ -41,15 +43,17 @@
             this.tbFichero = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btCrearAeropuertos
             // 
-            this.btCrearAeropuertos.Location = new System.Drawing.Point(99, 86);
+            this.btCrearAeropuertos.Location = new System.Drawing.Point(27, 43);
             this.btCrearAeropuertos.Name = "btCrearAeropuertos";
-            this.btCrearAeropuertos.Size = new System.Drawing.Size(187, 39);
+            this.btCrearAeropuertos.Size = new System.Drawing.Size(187, 34);
             this.btCrearAeropuertos.TabIndex = 0;
             this.btCrearAeropuertos.Text = "Crear aeropuertos";
             this.btCrearAeropuertos.UseVisualStyleBackColor = true;
@@ -57,9 +61,9 @@
             // 
             // btAddCliente
             // 
-            this.btAddCliente.Location = new System.Drawing.Point(99, 145);
+            this.btAddCliente.Location = new System.Drawing.Point(27, 93);
             this.btAddCliente.Name = "btAddCliente";
-            this.btAddCliente.Size = new System.Drawing.Size(187, 33);
+            this.btAddCliente.Size = new System.Drawing.Size(187, 34);
             this.btAddCliente.TabIndex = 1;
             this.btAddCliente.Text = "Anadir Cliente";
             this.btAddCliente.UseVisualStyleBackColor = true;
@@ -67,7 +71,7 @@
             // 
             // btVerBilletes
             // 
-            this.btVerBilletes.Location = new System.Drawing.Point(99, 199);
+            this.btVerBilletes.Location = new System.Drawing.Point(27, 147);
             this.btVerBilletes.Name = "btVerBilletes";
             this.btVerBilletes.Size = new System.Drawing.Size(187, 34);
             this.btVerBilletes.TabIndex = 2;
@@ -77,9 +81,9 @@
             // 
             // btModificarBillete
             // 
-            this.btModificarBillete.Location = new System.Drawing.Point(99, 258);
+            this.btModificarBillete.Location = new System.Drawing.Point(27, 199);
             this.btModificarBillete.Name = "btModificarBillete";
-            this.btModificarBillete.Size = new System.Drawing.Size(187, 32);
+            this.btModificarBillete.Size = new System.Drawing.Size(187, 34);
             this.btModificarBillete.TabIndex = 3;
             this.btModificarBillete.Text = "Modificar billetes";
             this.btModificarBillete.UseVisualStyleBackColor = true;
@@ -87,9 +91,9 @@
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(99, 310);
+            this.btSalir.Location = new System.Drawing.Point(27, 251);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(187, 38);
+            this.btSalir.Size = new System.Drawing.Size(187, 34);
             this.btSalir.TabIndex = 4;
             this.btSalir.Text = "Salir de la aplicacion";
             this.btSalir.UseVisualStyleBackColor = true;
@@ -97,13 +101,17 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(351, 76);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(321, 45);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(300, 300);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(366, 323);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             this.chart1.Visible = false;
@@ -112,7 +120,7 @@
             // 
             this.btnCargar.Location = new System.Drawing.Point(48, 21);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(115, 76);
+            this.btnCargar.Size = new System.Drawing.Size(157, 76);
             this.btnCargar.TabIndex = 6;
             this.btnCargar.Text = "Cargar Fichero";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -120,10 +128,11 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(185, 21);
+            this.btnGuardar.Location = new System.Drawing.Point(221, 21);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(131, 76);
+            this.btnGuardar.Size = new System.Drawing.Size(156, 76);
             this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Guardar fichero";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -131,7 +140,7 @@
             // 
             this.tbFichero.Location = new System.Drawing.Point(48, 124);
             this.tbFichero.Name = "tbFichero";
-            this.tbFichero.Size = new System.Drawing.Size(268, 22);
+            this.tbFichero.Size = new System.Drawing.Size(329, 22);
             this.tbFichero.TabIndex = 8;
             // 
             // groupBox1
@@ -139,9 +148,9 @@
             this.groupBox1.Controls.Add(this.btnCargar);
             this.groupBox1.Controls.Add(this.tbFichero);
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Location = new System.Drawing.Point(178, 392);
+            this.groupBox1.Location = new System.Drawing.Point(119, 401);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 161);
+            this.groupBox1.Size = new System.Drawing.Size(418, 161);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Abrir Archivo";
@@ -151,6 +160,20 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Archivos TXT(*.txt)|*.txt|Archivos DOC(*.doc)|*.doc";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btCrearAeropuertos);
+            this.groupBox2.Controls.Add(this.btAddCliente);
+            this.groupBox2.Controls.Add(this.btSalir);
+            this.groupBox2.Controls.Add(this.btVerBilletes);
+            this.groupBox2.Controls.Add(this.btModificarBillete);
+            this.groupBox2.Location = new System.Drawing.Point(27, 35);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(246, 333);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Opciones de admin";
+            // 
             // Menu_administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,16 +181,14 @@
             this.ClientSize = new System.Drawing.Size(721, 584);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.btSalir);
-            this.Controls.Add(this.btModificarBillete);
-            this.Controls.Add(this.btVerBilletes);
-            this.Controls.Add(this.btAddCliente);
-            this.Controls.Add(this.btCrearAeropuertos);
+            this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu_administrador";
             this.Text = "Menu_administrador";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -185,5 +206,6 @@
         private System.Windows.Forms.TextBox tbFichero;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

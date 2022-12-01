@@ -45,12 +45,14 @@
             this.lbCalendarIda = new System.Windows.Forms.Label();
             this.lbCompraHecha = new System.Windows.Forms.Label();
             this.btAdmin = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cBoxIda
             // 
             this.cBoxIda.FormattingEnabled = true;
-            this.cBoxIda.Location = new System.Drawing.Point(93, 40);
+            this.cBoxIda.Location = new System.Drawing.Point(125, 44);
             this.cBoxIda.Name = "cBoxIda";
             this.cBoxIda.Size = new System.Drawing.Size(121, 24);
             this.cBoxIda.TabIndex = 0;
@@ -60,7 +62,7 @@
             // cBoxVuelta
             // 
             this.cBoxVuelta.FormattingEnabled = true;
-            this.cBoxVuelta.Location = new System.Drawing.Point(278, 40);
+            this.cBoxVuelta.Location = new System.Drawing.Point(323, 41);
             this.cBoxVuelta.Name = "cBoxVuelta";
             this.cBoxVuelta.Size = new System.Drawing.Size(121, 24);
             this.cBoxVuelta.TabIndex = 1;
@@ -70,7 +72,7 @@
             // lbOrigen
             // 
             this.lbOrigen.AutoSize = true;
-            this.lbOrigen.Location = new System.Drawing.Point(90, 12);
+            this.lbOrigen.Location = new System.Drawing.Point(163, 16);
             this.lbOrigen.Name = "lbOrigen";
             this.lbOrigen.Size = new System.Drawing.Size(47, 16);
             this.lbOrigen.TabIndex = 2;
@@ -79,7 +81,7 @@
             // lbDestino
             // 
             this.lbDestino.AutoSize = true;
-            this.lbDestino.Location = new System.Drawing.Point(275, 12);
+            this.lbDestino.Location = new System.Drawing.Point(356, 16);
             this.lbDestino.Name = "lbDestino";
             this.lbDestino.Size = new System.Drawing.Size(53, 16);
             this.lbDestino.TabIndex = 3;
@@ -87,9 +89,9 @@
             // 
             // btSelectVuelta
             // 
-            this.btSelectVuelta.Location = new System.Drawing.Point(461, 36);
+            this.btSelectVuelta.Location = new System.Drawing.Point(494, 37);
             this.btSelectVuelta.Name = "btSelectVuelta";
-            this.btSelectVuelta.Size = new System.Drawing.Size(217, 31);
+            this.btSelectVuelta.Size = new System.Drawing.Size(182, 31);
             this.btSelectVuelta.TabIndex = 4;
             this.btSelectVuelta.Text = "Seleccionar vuelo de vuelta";
             this.btSelectVuelta.UseVisualStyleBackColor = true;
@@ -97,7 +99,7 @@
             // 
             // monthCalendarIda
             // 
-            this.monthCalendarIda.Location = new System.Drawing.Point(93, 107);
+            this.monthCalendarIda.Location = new System.Drawing.Point(80, 135);
             this.monthCalendarIda.MaxSelectionCount = 1;
             this.monthCalendarIda.Name = "monthCalendarIda";
             this.monthCalendarIda.TabIndex = 5;
@@ -106,7 +108,7 @@
             // lbVueloOrSelected
             // 
             this.lbVueloOrSelected.AutoSize = true;
-            this.lbVueloOrSelected.Location = new System.Drawing.Point(122, 341);
+            this.lbVueloOrSelected.Location = new System.Drawing.Point(109, 351);
             this.lbVueloOrSelected.Name = "lbVueloOrSelected";
             this.lbVueloOrSelected.Size = new System.Drawing.Size(193, 16);
             this.lbVueloOrSelected.TabIndex = 6;
@@ -115,7 +117,7 @@
             // lbVueloDestSelected
             // 
             this.lbVueloDestSelected.AutoSize = true;
-            this.lbVueloDestSelected.Location = new System.Drawing.Point(122, 368);
+            this.lbVueloDestSelected.Location = new System.Drawing.Point(109, 378);
             this.lbVueloDestSelected.Name = "lbVueloDestSelected";
             this.lbVueloDestSelected.Size = new System.Drawing.Size(191, 16);
             this.lbVueloDestSelected.TabIndex = 7;
@@ -124,7 +126,7 @@
             // lbFechaIda
             // 
             this.lbFechaIda.AutoSize = true;
-            this.lbFechaIda.Location = new System.Drawing.Point(474, 341);
+            this.lbFechaIda.Location = new System.Drawing.Point(489, 351);
             this.lbFechaIda.Name = "lbFechaIda";
             this.lbFechaIda.Size = new System.Drawing.Size(111, 16);
             this.lbFechaIda.TabIndex = 8;
@@ -132,7 +134,7 @@
             // 
             // monthCalendarVuelta
             // 
-            this.monthCalendarVuelta.Location = new System.Drawing.Point(436, 107);
+            this.monthCalendarVuelta.Location = new System.Drawing.Point(451, 135);
             this.monthCalendarVuelta.MaxSelectionCount = 1;
             this.monthCalendarVuelta.Name = "monthCalendarVuelta";
             this.monthCalendarVuelta.TabIndex = 9;
@@ -141,7 +143,7 @@
             // lbFechaVuelta
             // 
             this.lbFechaVuelta.AutoSize = true;
-            this.lbFechaVuelta.Location = new System.Drawing.Point(474, 368);
+            this.lbFechaVuelta.Location = new System.Drawing.Point(489, 378);
             this.lbFechaVuelta.Name = "lbFechaVuelta";
             this.lbFechaVuelta.Size = new System.Drawing.Size(128, 16);
             this.lbFechaVuelta.TabIndex = 10;
@@ -149,9 +151,9 @@
             // 
             // btComprar
             // 
-            this.btComprar.Location = new System.Drawing.Point(320, 406);
+            this.btComprar.Location = new System.Drawing.Point(278, 406);
             this.btComprar.Name = "btComprar";
-            this.btComprar.Size = new System.Drawing.Size(131, 55);
+            this.btComprar.Size = new System.Drawing.Size(230, 55);
             this.btComprar.TabIndex = 11;
             this.btComprar.Text = "Comprar Billete";
             this.btComprar.UseVisualStyleBackColor = true;
@@ -160,7 +162,7 @@
             // lbCalendarVuelta
             // 
             this.lbCalendarVuelta.AutoSize = true;
-            this.lbCalendarVuelta.Location = new System.Drawing.Point(405, 82);
+            this.lbCalendarVuelta.Location = new System.Drawing.Point(420, 110);
             this.lbCalendarVuelta.Name = "lbCalendarVuelta";
             this.lbCalendarVuelta.Size = new System.Drawing.Size(103, 16);
             this.lbCalendarVuelta.TabIndex = 13;
@@ -169,7 +171,7 @@
             // lbCalendarIda
             // 
             this.lbCalendarIda.AutoSize = true;
-            this.lbCalendarIda.Location = new System.Drawing.Point(100, 82);
+            this.lbCalendarIda.Location = new System.Drawing.Point(87, 110);
             this.lbCalendarIda.Name = "lbCalendarIda";
             this.lbCalendarIda.Size = new System.Drawing.Size(86, 16);
             this.lbCalendarIda.TabIndex = 12;
@@ -193,6 +195,20 @@
             this.btAdmin.UseVisualStyleBackColor = true;
             this.btAdmin.Click += new System.EventHandler(this.btAdmin_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cBoxIda);
+            this.groupBox1.Controls.Add(this.lbOrigen);
+            this.groupBox1.Controls.Add(this.btSelectVuelta);
+            this.groupBox1.Controls.Add(this.cBoxVuelta);
+            this.groupBox1.Controls.Add(this.lbDestino);
+            this.groupBox1.Location = new System.Drawing.Point(64, -1);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(706, 99);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Elija su destino";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,15 +225,13 @@
             this.Controls.Add(this.lbVueloDestSelected);
             this.Controls.Add(this.lbVueloOrSelected);
             this.Controls.Add(this.monthCalendarIda);
-            this.Controls.Add(this.btSelectVuelta);
-            this.Controls.Add(this.lbDestino);
-            this.Controls.Add(this.lbOrigen);
-            this.Controls.Add(this.cBoxVuelta);
-            this.Controls.Add(this.cBoxIda);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "AerolineasAdrian";
+            this.Text = "Haga su viaje";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +255,7 @@
         private System.Windows.Forms.Label lbCalendarIda;
         private System.Windows.Forms.Label lbCompraHecha;
         private System.Windows.Forms.Button btAdmin;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
